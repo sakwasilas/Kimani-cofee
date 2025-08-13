@@ -35,7 +35,7 @@ header nav ul li a {
 /* Hero */
 .hero {
   height: 80vh;
-  background: url('./images/kimani\ coffe.jpg') center/cover no-repeat;
+  background: url('./images/kimani-coffe.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
