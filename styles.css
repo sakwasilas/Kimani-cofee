@@ -1,0 +1,173 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #4B2E2B;
+  color: white;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  background: url('/images/kimani\ coffe.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #D2691E;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Sections */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #4B2E2B;
+  color: white;
+  padding: 20px;
+}
+footer .social a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+/* About Section Styling */
+#about {
+  background-color: #f5f0e6; /* light coffee-beige background */
+  padding: 60px 20px;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  line-height: 1.8;
+}
+
+#about h2 {
+  text-align: center;
+  color: #4B2E2B; /* dark coffee brown */
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+}
+
+#about p {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#about strong {
+  color: #8B4513; /* highlight names and coffee grades */
+}
+/* Contact Section Styling */
+#contact {
+  background-color: #fff7f0; /* very light coffee-beige */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  color: #4B2E2B; /* dark coffee brown */
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: 'Georgia', serif;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: none;
+  font-family: Arial, sans-serif;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #D2691E; /* coffee brown focus color */
+  outline: none;
+}
+
+#contact button {
+  padding: 15px;
+  background-color: #D2691E; /* coffee brown */
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #a0522d; /* darker brown on hover */
+}

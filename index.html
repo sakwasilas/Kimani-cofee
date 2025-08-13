@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimani cofee</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="logo">Kimani coffee</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Wake Up with the Best Coffee</h1>
+    <p>Discover the rich aroma and taste of Kimani</p>
+    <button onclick="scrollToProducts()">Shop Now</button>
+  </section>
+
+  <!-- About Section -->
+<section id="about">
+  <h2>About Kimani coffee</h2>
+  <p>
+    For the last 6 years, <strong>Kimani Coffee Experts Limited</strong> has specialized in coffee beans from Kenya farmers, processing them to meet global coffee standards. They have focused on the best of coffee grades <strong>AA, AB, and PB</strong> which they have been exporting to South Korea, Japan, North America, and Europe.
+  </p>
+  <p>
+    <strong>Mr. Samuel Kimani</strong>, the founder, is a certified coffee expert with over 30 years of experience in the coffee industry.
+  </p>
+  <p>
+    “Our coffee beans come from all over Kenya, a country famed for its best coffee exports used to improve the quality of other coffees from other parts of the world. Some of the counties whose farmers we buy from include Nyeri, Kirinyaga, Murang’a, and Meru; basically the Central Mount Kenya and Rift-Valley regions.”
+  </p>
+</section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2>Our Coffee</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="./images/cofee1.jpg" alt="Coffee 1">
+        <h3>Espresso</h3>
+        <p>Ksh 500</p>
+      </div>
+      <div class="product">
+        <img src="./images/coffee2.jpg" alt="Coffee 2">
+        <h3>Latte</h3>
+        <p>Ksh 600</p>
+      </div>
+      <div class="product">
+        <img src="./images/cofee3.jpg" alt="Coffee 3">
+        <h3>Cappuccino</h3>
+        <p>Ksh 550</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <center>
+    <p>&copy; 2025 Kimani cofee. All rights reserved.</p>
+    <div class="social">
+      <a href="#">+254722067570</a>|
+      <a href="#">info@kimanicofee.co.ke</a>|
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a>
+    </div>
+    </center>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
