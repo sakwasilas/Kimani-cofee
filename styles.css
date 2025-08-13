@@ -36,7 +36,7 @@ header nav ul li a {
 .hero
 {
   height: 80vh;
-  background:url('./images/banner.jpg') center/cover no-repeat;
+  background:url('./images/banner2.jpg') center/cover no-repeat;
   display:flex;
   flex-direction:column;
   justify-content:center;
