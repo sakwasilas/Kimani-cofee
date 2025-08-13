@@ -33,15 +33,16 @@ header nav ul li a {
 }
 
 /* Hero */
-.hero {
+.hero
+{
   height: 80vh;
-  background: url('./images/kimani-coffe.jpg') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
+  background:url('./images/banner.jpg') center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-align:center;
 }
 
 .hero button {
