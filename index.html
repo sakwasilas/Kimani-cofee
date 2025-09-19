@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kimani cofee</title>
+  <title>Kimani Coffee</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Header / Navigation -->
   <header>
-    <div class="logo">Kimani coffee</div>
+    <div class="logo">Kimani Coffee</div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -29,66 +33,139 @@
   </section>
 
   <!-- About Section -->
-<section id="about">
-  <h2>About Kimani coffee</h2>
-  <p>
-    For the last 6 years, <strong>Kimani Coffee Experts Limited</strong> has specialized in coffee beans from Kenya farmers, processing them to meet global coffee standards. They have focused on the best of coffee grades <strong>AA, AB, and PB</strong> which they have been exporting to South Korea, Japan, North America, and Europe.
-  </p>
-  <p>
-    <strong>Mr. Samuel Kimani</strong>, the founder, is a certified coffee expert with over 30 years of experience in the coffee industry.
-  </p>
-  <p>
-    “Our coffee beans come from all over Kenya, a country famed for its best coffee exports used to improve the quality of other coffees from other parts of the world. Some of the counties whose farmers we buy from include Nyeri, Kirinyaga, Murang’a, and Meru; basically the Central Mount Kenya and Rift-Valley regions.”
-  </p>
-</section>
+  <section id="about">
+    <h2>About Kimani Coffee Experts</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          The founder of Kimani Coffee Experts Limited is <strong>Samuel Mwithukia Kimani</strong>, 
+          a certified coffee expert. He worked with international coffee companies for close to 
+          28 years in charge of quality.
+        </p>
+        <p>
+          He took early retirement in 2012 to found Kimani Coffee Experts Ltd, incorporated in May 2013.  
+          On 4th December 2013, the company was issued with a coffee trading licence by the Coffee Board of Kenya.
+        </p>
+        <p>
+          Since then, Kimani Coffee Experts Ltd has been buying, processing, and selling coffee.  
+          In 2013, the company bought 2000 bags of coffee from farmers and sold them to local and international buyers.
+        </p>
+        <p>
+          In 2013, the company engaged the services of two coffee graduates from Kimathi University:  
+          Mr. Joseph Wanjau (Sample Room) and Mr. John J. Kimani (Assistant Sample Attendant).
+        </p>
+        <p>
+          We may be small, but we are a great coffee team.
+        </p>
+      </div>
 
-  <!-- Products Section -->
-  <section id="products">
-    <h2>Our Coffee</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="./images/cofee1.jpg" alt="Coffee 1">
-        <h3>Espresso</h3>
-        <p>Ksh 500</p>
-      </div>
-      <div class="product">
-        <img src="./images/coffee2.jpg" alt="Coffee 2">
-        <h3>Latte</h3>
-        <p>Ksh 600</p>
-      </div>
-      <div class="product">
-        <img src="./images/cofee3.jpg" alt="Coffee 3">
-        <h3>Cappuccino</h3>
-        <p>Ksh 550</p>
+      <!-- Slideshow Image Card -->
+      <div class="about-image">
+        <div class="slideshow">
+          <img src="./images/coffee sde.jpg" alt="Coffee Slide 0">
+          <img src="./images/slider1.jpg" alt="Coffee Slide 1">
+          <img src="./images/slider2.jpg" alt="Coffee Slide 2">
+          <img src="./images/slider3.jpg" alt="Coffee Slide 3">
+          <img src="./images/slider4.jpg" alt="Coffee Slide 4">
+          <img src="./images/slider5.jpg" alt="Coffee Slide 5">
+          <img src="./images/slider6.jpg" alt="Coffee Slide 6">
+          <img src="./images/slider7.jpg" alt="Coffee Slide 7">
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Products Section -->
+  <section id="products">
+    <h2>Our Coffee</h2>
+    <p>
+      We deal in all types of Kenya coffee grades specializing in top quality 
+      <strong>AB, AA, and PB</strong>.  
+      We also deal with Kenya Coffee and have two types: 
+      <b>Type 1</b> and <b>Type 2</b>.
+    </p>
+
+    <h4>Top Qualities AB, AA and PB</h4>
+    <p>
+      We select the best AB, AA and PB from high growing coffee areas like Nyeri, Kirinyaga, 
+      Kiambu and Muranga counties among other coffee regions in Kenya.  
+      We look for coffee with fruit flavour, citrus flavour, heavy body, wild honey, and sharp acidity.  
+      We mainly deal with two types of grinders:
+    </p>
+
+    <div class="grinder-grid">
+      <!-- Grinder Type One -->
+      <div class="grinder-card">
+        <h4>Grinder Type One</h4>
+        <ul>
+          <li>Made up of 60% full beans</li>
+          <li>No under screen 12 is allowed</li>
+          <li>Cup quality: clean cup, well-balanced acidity, body, and flavour</li>
+        </ul>
+<hr>
+        <!-- Customer Preference inside first card -->
+        <div class="profile-card">
+          <h4>Customer Preference & Coffee Profiling Matching</h4>
+          <p>
+            We can match any quality from Kenya provided we get large samples of what needs to be matched.  
+            Give us your preferred coffee profile in terms of quality, and we will match it.  
+            We ship coffee to South Korea, Japan, USA, and Europe.  
+            On average, we ship three containers every month.
+          </p>
+        </div>
+      </div>
+
+      <!-- Grinder Type Two -->
+      <div class="grinder-card">
+        <h4>Grinder Type Two</h4>
+        <ul>
+          <li>Made up of 40% full beans</li>
+          <li>Some small beans allowed (but max 10% under screen 12)</li>
+          <li>Cup quality: clean cup, some acidity, some body, and mild flavour</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Storage and Value Addition -->
+    <div class="storage-card">
+      <h4>Storage and Value Addition</h4>
+      <p>
+        After buying our coffee from various marketing agents who have warehouses all over Nairobi,  
+        we move our coffee to <strong>Bolloré Transport & Logistics Kenya Limited</strong>,  
+        where we store, process, and export it to international markets.
+      </p>
+    </div>
+  </section>
+
   <!-- Contact Section -->
+
   <section id="contact">
     <h2>Contact Us</h2>
+    <p>Have questions? Reach out to us!</p>
     <form id="contactForm">
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message" required></textarea>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <center>
-    <p>&copy; 2025 Kimani cofee. All rights reserved.</p>
-    <div class="social">
-      <a href="#">+254722067570</a>|
-      <a href="#">info@kimanicofee.co.ke</a>|
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">Twitter</a>
+<footer>
+  <center>
+    <div class="footer-carousel">
+      <p class="footer-item">You can reach us on: Kimani Coffee Experts Ltd.</p>
+      <p class="footer-item">P.O BOX 40744-00100, Nairobi, Kenya</p>
+      <p class="footer-item">Tel: 0713015525, 0735754931</p>
+      <p class="footer-item"><strong>Email:</strong> mwithukia1949@gmail.com</p>
+      <p class="footer-item">kimani@kimanicoffee.companies</p>
+      <p class="footer-item"><b>Website:</b> www.kimanicoffee.com</p>
+      <p class="footer-item">&copy; 2025 Kimani Coffee. All rights reserved.</p>
     </div>
-    </center>
-  </footer>
+  </center>
+</footer>
 
-  <script src="script.js"></script>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
