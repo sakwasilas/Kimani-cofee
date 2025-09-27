@@ -736,5 +736,49 @@ footer {
   line-height: 1.6;
 }
 
+/* Mobile Responsive Fixes for Hero */
+@media (max-width: 768px) {
+  .hero-carousel {
+    height: 100vh; /* still full screen */
+  }
+
+  .hero-content {
+    max-width: 90%;
+    padding: 0 15px;
+    bottom: 12%; /* push text a little lower */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .btn {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    bottom: 10%; /* even lower for tiny phones */
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-content .btn {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
 
 
