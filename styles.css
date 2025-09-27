@@ -298,8 +298,8 @@ header nav ul li a:hover {
 .slideshow {
   position: relative;
   width: 100%;
-  max-width: 450px;
-  height: 300px;
+  max-width: 450px;   /* allows it to stay big on desktop */
+  aspect-ratio: 4 / 3; /* keeps nice proportions instead of fixed height */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -319,6 +319,14 @@ header nav ul li a:hover {
 /* First image visible by default */
 .slideshow img.active {
   opacity: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .slideshow {
+    max-width: 100%;   /* use full width of screen */
+    aspect-ratio: 16 / 9; /* widescreen look on mobile */
+  }
 }
 
 /* Dots container */
