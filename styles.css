@@ -735,3 +735,41 @@ footer {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+
+/* ============================
+   Responsive Hero Carousel Fix
+   ============================ */
+@media (max-width: 768px) {
+  .hero-carousel {
+    height: auto;              /* let height adjust naturally */
+    min-height: 60vh;          /* still tall enough for impact */
+  }
+
+  .hero-slide {
+    position: relative;
+    height: 60vh;              /* proportional height on phones */
+    background-size: contain;  /* show the full image without cropping */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;         /* smaller headline */
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-prev, .hero-next {
+    font-size: 1.5rem;
+    padding: 6px;
+  }
+
+  .hero-dots {
+    bottom: 10px;
+  }
+}
+
+
