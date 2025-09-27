@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kimani Coffee</title>
 
+  <!-- External Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +18,8 @@
   <header>
     <div class="logo">Kimani Coffee</div>
     <nav>
-      <ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+      <ul id="navList">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#products">Products</a></li>
@@ -25,19 +28,75 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Wake Up with the Best Coffee</h1>
-    <p>Discover the rich aroma and taste of Kimani</p>
-    <button onclick="scrollToProducts()">Shop Now</button>
+ <!-- Hero Carousel -->
+<section id="home" class="hero-carousel">
+  <div class="hero-slide active" style="background-image: url('./images/bannermine.png');">
+    <div class="hero-content">
+      <h1>Wake Up With The Best Coffee</h1>
+      <p>Discover the rich aroma and taste of Kimani.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image: url('./images/new/bannersilas.png');">
+    <div class="hero-content">
+      <h1>From Farm to Your Cup</h1>
+      <p>Freshly sourced beans directly from Kenyan farmers.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image: url('./images/new/bannergood.png');">
+    <div class="hero-content">
+      <h1>Taste the Excellence</h1>
+      <p>Premium quality coffee loved worldwide.</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button class="hero-prev">&#10094;</button>
+  <button class="hero-next">&#10095;</button>
+
+  <!-- Dots -->
+  <div class="hero-dots"></div>
+</section>
+
+  <!-- Hero Text + Images -->
+  <section class="hero-text-card">
+    <div class="hero-card">
+      <!-- Text Side -->
+      <div class="hero-card-text">
+        <h2>Discover the Taste of Real Coffee</h2>
+        <p>
+          Kenyan coffee is grown mainly in high altitude areas of Kenya including Nyeri, Muranga, Kirinyaga, Kiambu, Meru, Embu and Machakos.
+          Other areas include Western regions, Rift Valley, and Nyanza regions.
+          Coffee is carefully handpicked, selecting only the ripe red cherries, which are then dried.
+          After harvest, beans are graded by size and shape to ensure only the finest quality is selected.
+          Kenyan coffee is ranked among the best in the world, perfect for cappuccino, espresso, and filter coffee.
+        </p>
+        <!-- Call to Action Button -->
+        <a href="#products" class="cta-btn">Shop Coffee</a>
+      </div>
+
+      <!-- Images Side -->
+      <div class="hero-card-images">
+        <img src="./images/new/cofee3.jpg" alt="Coffee Image 1">
+        <img src="./images/new/cofee4.jpg" alt="Coffee Image 2">
+      </div>
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about">
     <h2>About Kimani Coffee Experts</h2>
     <div class="about-content">
+      <!-- Text Side -->
       <div class="about-text">
         <p>
+          Kimani coffee expert ltd is a company that specializes in coffee trade /proffessison coffee roasting services and coffee buying advisory services.
+          we are licensed as coffee dealers by the Agriculture and Food Authority (AFA) -coffee directorate.
+        </p>
           The founder of Kimani Coffee Experts Limited is <strong>Samuel Mwithukia Kimani</strong>, 
           a certified coffee expert. He worked with international coffee companies for close to 
           28 years in charge of quality.
@@ -51,145 +110,156 @@
           In 2013, the company bought 2000 bags of coffee from farmers and sold them to local and international buyers.
         </p>
         <p>
-          In 2013, the company engaged the services of two coffee graduates from Kimathi University:  
-          Mr. Joseph Wanjau (Sample Room) and Mr. John J. Kimani (Assistant Sample Attendant).
-        </p>
-        <p>
           We may be small, but we are a great coffee team.
         </p>
       </div>
 
-      <!-- Slideshow Image Card -->
+      <!-- Image Slideshow Side -->
       <div class="about-image">
         <div class="slideshow">
-          <img src="./images/coffee sde.jpg" alt="Coffee Slide 0">
           <img src="./images/slider1.jpg" alt="Coffee Slide 1">
           <img src="./images/slider2.jpg" alt="Coffee Slide 2">
           <img src="./images/slider3.jpg" alt="Coffee Slide 3">
           <img src="./images/slider4.jpg" alt="Coffee Slide 4">
-          <img src="./images/slider5.jpg" alt="Coffee Slide 5">
-          <img src="./images/slider6.jpg" alt="Coffee Slide 6">
-          <img src="./images/slider7.jpg" alt="Coffee Slide 7">
+        </div>
+        <!-- Navigation dots -->
+        <div class="slideshow-dots">
+          <span class="dot" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
         </div>
       </div>
     </div>
   </section>
+  <!-- Core Values Section -->
+<section id="values" class="values-section">
+  <h2>Our Core Values</h2>
+  <div class="values-grid">
+    <!-- Value 1 -->
+    <div class="value-card">
+      <h3>☕ Quality Excellence</h3>
+      <p>We are committed to delivering the highest quality coffee by upholding strict quality standards.</p>
+    </div>
+    <!-- Value 2 -->
+    <div class="value-card">
+      <h3>🤝 Integrity</h3>
+      <p>We promote honesty, transparency, and accountability in everything we do.</p>
+    </div>
+    <!-- Value 3 -->
+    <div class="value-card">
+      <h3>💬 Customer Service</h3>
+      <p>We respond to our customers’ needs and strive to exceed expectations every time.</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- Products Section -->
   <section id="products">
     <h2>Our Coffee</h2>
     <p>
-      We deal in all types of Kenya coffee grades specializing in top quality 
-      <strong>AB, AA, and PB</strong>.  
-      We also deal with Kenya Coffee and have two types: 
-      <b>Type 1</b> and <b>Type 2</b>.
-    </p>
-
-    <h4>Top Qualities AB, AA and PB</h4>
-    <p>
-      We select the best AB, AA and PB from high growing coffee areas like Nyeri, Kirinyaga, 
-      Kiambu and Muranga counties among other coffee regions in Kenya.  
-      We look for coffee with fruit flavour, citrus flavour, heavy body, wild honey, and sharp acidity.  
-      We mainly deal with two types of grinders:
+      we provide Premium green kenyan Arabica coffee beans and facilitate reliable global export servives.
+      <span>
+        we deal in all types of kenyan coffees grades specializing in top quality <STRONG>AB,<STRONG>AA AND <STRONG>PB</STRONG>
+        Top quality AB.
+      </span>
+      kenyan coffee also have two types ,type 1 and type 2
+     
     </p>
 
     <div class="grinder-grid">
-      <!-- Grinder Type One -->
+      <!-- Grinder Card One -->
       <div class="grinder-card">
         <h4>Grinder Type One</h4>
         <ul>
-          <li>Made up of 60% full beans</li>
-          <li>No under screen 12 is allowed</li>
-          <li>Cup quality: clean cup, well-balanced acidity, body, and flavour</li>
+          <li>60% full beans</li>
+          <li>No under screen 12 allowed</li>
+          <li>Clean cup, balanced acidity, body, and flavour</li>
         </ul>
-<hr>
-        <!-- Customer Preference inside first card -->
-        <div class="profile-card">
-          <h4>Customer Preference & Coffee Profiling Matching</h4>
-          <p>
-            We can match any quality from Kenya provided we get large samples of what needs to be matched.  
-            Give us your preferred coffee profile in terms of quality, and we will match it.  
-            We ship coffee to South Korea, Japan, USA, and Europe.  
-            On average, we ship three containers every month.
-          </p>
-        </div>
+        <img src="./images/new/cofee2.jpg" alt="Coffee Beans" class="coffee-image">
       </div>
 
-      <!-- Grinder Type Two -->
+      <!-- Grinder Card Two -->
       <div class="grinder-card">
         <h4>Grinder Type Two</h4>
         <ul>
-          <li>Made up of 40% full beans</li>
-          <li>Some small beans allowed (but max 10% under screen 12)</li>
-          <li>Cup quality: clean cup, some acidity, some body, and mild flavour</li>
-     <img src="./images/new/cofee111.jpg" alt="Coffee Beans" class="coffee-image"width="500"height="200">
+          <li>40% full beans</li>
+          <li>Up to 10% small beans allowed</li>
+          <li>Clean cup, mild flavour</li>
         </ul>
+        <img src="./images/new/cofee111.jpg" alt="Coffee Beans" class="coffee-image">
       </div>
     </div>
-
-    <div class="storage-card">
-  <h4>Storage and Value Addition</h4>
-  <p>
-    After buying our coffee from various marketing agents who have warehouses all over Nairobi,  
-    we move our coffee to <strong>Bolloré Transport & Logistics Kenya Limited</strong>,  
-    where we store, process, and export it to international markets.
-  </p>
-
-  <div class="card-grid">
-    <div class="card">
-      <img src="./images/new/cofee2.jpg" alt="Coffee Storage">
-      <div class="card-text">
-        <h5>Coffee Storage</h5>
-        <p>Proper storage ensures the beans maintain quality before processing and export.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./images/new/cofee3.jpg" alt="Coffee Processing">
-      <div class="card-text">
-        <h5>Coffee Processing</h5>
-        <p>Processing is done carefully to preserve aroma, body, and flavor of the coffee.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="./images/new/cofee4.jpg" alt="Coffee Packaging">
-      <div class="card-text">
-        <h5>Coffee Packaging</h5>
-        <p>We package our coffee in high-quality bags to ensure freshness during transit.</p>
-      </div>  
-  </div>
-</div>
-
+  </section>
 
   <!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p class="contact-intro">Have questions? We'd love to hear from you!</p>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Have questions? Reach out to us!</p>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
+  <div class="contact-container">
+    <!-- Contact Form -->
+    <form id="contactForm" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="cta-btn">Send Message</button>
     </form>
-  </section>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>Address:</strong> P.O BOX 40744-00100, Nairobi, Kenya</p>
+      <p><strong>Phone:</strong> 0713 015 525 / 0735 754 931</p>
+      <p><strong>Email:</strong> mwithukia1949@gmail.com</p>
+      <p><strong>Website:</strong> www.kimanicoffee.com</p>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
 <footer>
-  <center>
-    <div class="footer-carousel">
-      <p class="footer-item">You can reach us on: Kimani Coffee Experts Ltd.</p>
-      <p class="footer-item">P.O BOX 40744-00100, Nairobi, Kenya</p>
-      <p class="footer-item">Tel: 0713015525, 0735754931</p>
-      <p class="footer-item"><strong>Email:</strong> mwithukia1949@gmail.com</p>
-      <p class="footer-item">kimani@kimanicoffee.companies</p>
-      <p class="footer-item"><b>Website:</b> www.kimanicoffee.com</p>
-      <p class="footer-item">&copy; 2025 Kimani Coffee. All rights reserved.</p>
+  <div class="footer-container">
+    <!-- Company Info -->
+    <div class="footer-about">
+      <h3>Kimani Coffee Experts Ltd.</h3>
+      <p>P.O BOX 40744-00100, Nairobi, Kenya</p>
+      <p><strong>Phone:</strong> 0713 015 525 / 0735 754 931</p>
+      <p><strong>Email:</strong> mwithukia1949@gmail.com</p>
+      <p><strong>Website:</strong> www.kimanicoffee.com</p>
     </div>
-  </center>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="./images/new/icons/fb.jpg" alt="Facebook"></a>
+        <a href="#"><img src="./images/new/icons/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="./images/new/icons/instagram.jpg" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Kimani Coffee. All rights reserved.</p>
+  </div>
 </footer>
 
 
+  <!-- JavaScript -->
   <script src="scripts.js"></script>
 </body>
 </html>
