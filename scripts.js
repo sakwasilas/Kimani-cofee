@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ------------------------------ */
   try {
     if (window.emailjs && typeof emailjs.init === "function") {
-      emailjs.init("YOUR_PUBLIC_KEY"); // <-- replace
+      emailjs.init("AaSsCrdUXy1weus_T"); // <-- Replace with your EmailJS public key
     }
   } catch (err) {
     console.warn("EmailJS not available:", err);
@@ -36,25 +36,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!(window.emailjs && typeof emailjs.sendForm === "function")) {
         if (window.Swal) {
-          Swal.fire("Email service not configured", "Contact form will not send until EmailJS is set up.", "warning");
+          Swal.fire(
+            "Email service not configured",
+            "Contact form will not send until EmailJS is set up.",
+            "warning"
+          );
         } else {
           alert("Email service not configured. Please set up EmailJS.");
         }
         return;
       }
 
-      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      emailjs
+        .sendForm("service_p2dmplg", "template_f0v8afi", this) // <-- Replace these with your EmailJS Service ID and Template ID
         .then(() => {
           if (window.Swal) {
-            Swal.fire("Message sent", "Thank you — we'll get back to you soon.", "success");
+            Swal.fire(
+              "Message sent",
+              "Thank you — we'll get back to you soon.",
+              "success"
+            );
           } else {
             alert("Message sent — thank you!");
           }
           contactForm.reset();
-        }, (err) => {
+        })
+        .catch((err) => {
           console.error("EmailJS error:", err);
           if (window.Swal) {
-            Swal.fire("Error", "There was a problem sending your message. Try again later.", "error");
+            Swal.fire(
+              "Error",
+              "There was a problem sending your message. Try again later.",
+              "error"
+            );
           } else {
             alert("Error sending message.");
           }
@@ -115,8 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (timer) clearInterval(timer);
     }
 
-    dots.forEach(dot =>
-      dot.addEventListener("click", e => {
+    dots.forEach((dot) =>
+      dot.addEventListener("click", (e) => {
         show(parseInt(e.target.dataset.index));
         start();
       })
@@ -126,8 +140,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = container.querySelector(".hero-prev");
     const nextBtn = container.querySelector(".hero-next");
     if (prevBtn && nextBtn) {
-      prevBtn.addEventListener("click", () => { show((current - 1 + slides.length) % slides.length); start(); });
-      nextBtn.addEventListener("click", () => { next(); start(); });
+      prevBtn.addEventListener("click", () => {
+        show((current - 1 + slides.length) % slides.length);
+        start();
+      });
+      nextBtn.addEventListener("click", () => {
+        next();
+        start();
+      });
     }
 
     // Pause on hover
@@ -144,33 +164,4 @@ document.addEventListener("DOMContentLoaded", function () {
   ------------------------------ */
   initSlideshow(".about-image .slideshow", 4000);
   initSlideshow(".hero-carousel", 5000);
-
 });
-
-
-let current = 0;
-const slides = document.querySelectorAll('.slideshow img');
-const dots = document.querySelectorAll('.dot');
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    dots[i].classList.remove('active');
-    if (i === index) {
-      slide.classList.add('active');
-      dots[i].classList.add('active');
-    }
-  });
-}
-
-function nextSlide() {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}
-
-// Start with first slide
-showSlide(current);
-
-// Auto-slide every 4 seconds
-setInterval(nextSlide, 4000);
-
